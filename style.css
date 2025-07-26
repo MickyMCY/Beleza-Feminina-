@@ -641,48 +641,50 @@ body {
 }
 
 .payment-methods {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
-    flex-wrap: nowrap; /* tudo numa linha */
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 .payment-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .payment-logo {
-    width: 120px;         /* largura fixa para todos */
-    height: 40px;         /* altura fixa */
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;      /* fonte maior */
-    font-weight: bold;
-    color: white;
-    white-space: nowrap;  /* texto não quebra linha */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
 }
 
+/* Cores corrigidas */
 .payment-logo.visa {
-    background-color: #1a1f71;
+  background-color: #1a1f71;
 }
 
 .payment-logo.mastercard {
-    background: linear-gradient(45deg, #eb001b, #ff5f00);
+  background-color: #ea001b;
 }
 
 .payment-logo.mpesa {
-    background-color: #10b981;
+  background-color: #5dbb63;
 }
 
 .payment-logo.emola {
-    background-color: #f97316;
+  background-color: #f97316; /* Laranja */
 }
 
 .footer-links {

@@ -656,15 +656,18 @@ body {
 }
 
 .payment-logo {
-    width: 40px;
-    height: 24px;
-    border-radius: 4px;
+    padding: 8px 20px;        /* padding para deixar retangular */
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 14px;           /* aumentei para melhor leitura */
     font-weight: bold;
     color: white;
+    min-width: 100px;          /* largura mínima para consistência */
+    height: 36px;              /* altura maior e uniforme */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;       /* evitar quebra de linha no texto */
 }
 
 .payment-logo.visa {
@@ -681,11 +684,6 @@ body {
 
 .payment-logo.emola {
     background-color: #f97316;
-}
-
-.payment-item span {
-    font-size: 10px;
-    color: #d1d5db;
 }
 
 .footer-links {

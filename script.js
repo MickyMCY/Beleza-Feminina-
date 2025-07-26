@@ -68,9 +68,8 @@ function smoothScroll(target) {
     }
 }
 
-// Novo: Scroll suave controlado pelo botão do cabeçalho, com possibilidade de interrupção pelo usuário
+// Scroll suave controlado pelo botão do cabeçalho, com possibilidade de interrupção pelo usuário
 document.addEventListener('DOMContentLoaded', () => {
-    // Variáveis para controle do scroll suave
     const btn = document.getElementById('headerBtn'); // Botão do header
     const targetSection = document.querySelector('.ambassador'); // Seção da embaixadora
     let scrollAnimationId = null;
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!btn || !targetSection) return;
 
-    function smoothScrollTo(element, duration = 1800) {
+    function smoothScrollTo(element, duration = 10000) { // duração 10 segundos
         const start = window.pageYOffset;
         const end = element.getBoundingClientRect().top + start;
         const distance = end - start;
@@ -124,11 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Quando o botão for clicado, inicia o scroll suave só se não estiver rolando ainda
     btn.addEventListener('click', () => {
         if (!isScrolling) {
-            smoothScrollTo(targetSection, 1800);
+            smoothScrollTo(targetSection, 10000);
         }
     });
 });
-
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -313,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add click tracking for analytics (optional)
+    // Add click tracking for analytics (opcional)
     document.addEventListener('click', function(e) {
         const target = e.target;
 

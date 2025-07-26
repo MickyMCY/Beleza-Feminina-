@@ -645,7 +645,7 @@ body {
     justify-content: center;
     gap: 16px;
     margin-bottom: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* tudo numa linha */
 }
 
 .payment-item {
@@ -656,18 +656,17 @@ body {
 }
 
 .payment-logo {
-    padding: 8px 20px;        /* padding para deixar retangular */
+    width: 120px;         /* largura fixa para todos */
+    height: 40px;         /* altura fixa */
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;           /* aumentei para melhor leitura */
+    font-size: 16px;      /* fonte maior */
     font-weight: bold;
     color: white;
-    min-width: 100px;          /* largura mínima para consistência */
-    height: 36px;              /* altura maior e uniforme */
+    white-space: nowrap;  /* texto não quebra linha */
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    white-space: nowrap;       /* evitar quebra de linha no texto */
 }
 
 .payment-logo.visa {

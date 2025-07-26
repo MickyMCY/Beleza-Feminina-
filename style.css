@@ -641,50 +641,63 @@ body {
 }
 
 .payment-methods {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre cada método */
+    flex-wrap: nowrap; /* Força ficar tudo em uma linha */
+    margin-bottom: 24px;
 }
 
 .payment-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .payment-logo {
-  min-width: 80px;
-  height: 30px;
-  border-radius: 6px;
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: bold;
-  color: white;
-  white-space: nowrap;
-  text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-width: 90px;
+    height: 36px;
+    box-sizing: border-box;
 }
 
-/* Cores corrigidas */
+/* Visa menor */
 .payment-logo.visa {
-  background-color: #1a1f71;
+    background-color: #1a1f71; /* azul Visa */
+    font-size: 13px;
+    min-width: 85px;
+    height: 34px;
 }
 
+/* Mastercard mantém tamanho maior */
 .payment-logo.mastercard {
-  background-color: #ea001b;
+    background-color: #eb001b; /* vermelho tradicional Mastercard */
+    font-size: 16px;
+    min-width: 120px;
+    height: 40px;
 }
 
+/* M-Pesa menor */
 .payment-logo.mpesa {
-  background-color: #5dbb63;
+    background-color: #0fa03a; /* verde M-Pesa */
+    font-size: 13px;
+    min-width: 85px;
+    height: 34px;
 }
 
+/* Emola laranja */
 .payment-logo.emola {
-  background-color: #f97316; /* Laranja */
+    background-color: #f7931e; /* laranja Emola */
+    font-size: 13px;
+    min-width: 85px;
+    height: 34px;
 }
 
 .footer-links {
